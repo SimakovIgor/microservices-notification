@@ -44,5 +44,9 @@
             <groupId>ru.simakov.commons.starter</groupId>
             <artifactId>open-telemetry-jaeger</artifactId>
         </dependency>
+        <dependency>
+            <groupId>ru.simakov.commons.starter</groupId>
+            <artifactId>amqp</artifactId>
+        </dependency>
     </dependencies>
 </project>
