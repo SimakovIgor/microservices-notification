@@ -9,13 +9,17 @@ import org.springframework.test.context.ContextConfiguration;
 import ru.simakov.repository.NotificationRepository;
 import ru.simakov.starter.testing.base.DatabaseAwareTestBase;
 import ru.simakov.starter.testing.initializer.PostgreSQLInitializer;
+import ru.simakov.starter.testing.initializer.RabbitMQInitializer;
 
 import java.util.Set;
 
 @ActiveProfiles("test")
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @EnableAutoConfiguration
-@ContextConfiguration(initializers = PostgreSQLInitializer.class)
+@ContextConfiguration(initializers = {
+        PostgreSQLInitializer.class,
+        RabbitMQInitializer.class
+})
 public abstract class IntegrationTestBase extends DatabaseAwareTestBase {
     @Autowired
     protected NotificationRepository notificationRepository;
