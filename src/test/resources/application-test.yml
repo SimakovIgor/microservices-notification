@@ -1,0 +1,10 @@
+spring:
+  flyway:
+    enabled: true
+
+logging.level:
+  org.springframework.orm.jpa.JpaTransactionManager: DEBUG
+
+eureka:
+  client:
+    enabled: false

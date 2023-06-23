@@ -45,13 +45,19 @@
             <groupId>ru.simakov.commons.clients</groupId>
             <artifactId>notification</artifactId>
         </dependency>
+
         <dependency>
             <groupId>ru.simakov.commons.starter</groupId>
-            <artifactId>open-telemetry-jaeger</artifactId>
+            <artifactId>open-telemetry-jaeger-starter</artifactId>
         </dependency>
         <dependency>
             <groupId>ru.simakov.commons.starter</groupId>
-            <artifactId>amqp</artifactId>
+            <artifactId>amqp-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>ru.simakov.commons.starter</groupId>
+            <artifactId>testing-starter</artifactId>
         </dependency>
     </dependencies>
 
