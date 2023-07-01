@@ -11,7 +11,7 @@ import ru.simakov.model.entity.Notification;
 public class NotificationService {
     private final NotificationRepository notificationRepository;
 
-    private static Notification mapNotification(NotificationRequest notificationRequest) {
+    private static Notification mapNotification(final NotificationRequest notificationRequest) {
         return Notification.builder()
                 .toCustomerId(notificationRequest.getToCustomerId())
                 .toCustomerEmail(notificationRequest.getToCustomerEmail())
@@ -20,7 +20,7 @@ public class NotificationService {
                 .build();
     }
 
-    public void sendNotification(NotificationRequest notificationRequest) {
+    public void sendNotification(final NotificationRequest notificationRequest) {
         var notification = mapNotification(notificationRequest);
 
         notificationRepository.save(notification);

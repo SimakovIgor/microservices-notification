@@ -14,7 +14,7 @@ public class NotificationConsumer {
     private final NotificationService notificationService;
 
     @RabbitListener(queues = "${rabbitmq.queue.notification}")
-    public void consumer(NotificationRequest notificationRequest) {
+    public void consumer(final NotificationRequest notificationRequest) {
         log.info("Consumed message: {}", notificationRequest);
         notificationService.sendNotification(notificationRequest);
     }

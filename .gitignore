@@ -133,6 +133,5 @@ buildNumber.properties
 *.iml
 *.ipr
 *.log.*
-lombok.config
 allure-results
 /.idea/

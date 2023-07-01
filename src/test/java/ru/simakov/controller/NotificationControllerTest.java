@@ -49,5 +49,4 @@ class NotificationControllerTest extends IntegrationTestBase {
                 });
     }
 
-
 }
