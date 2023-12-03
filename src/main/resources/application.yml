@@ -2,6 +2,8 @@ server:
   port: 8086
 
 spring:
+  main:
+    banner-mode: off
   application:
     name: notification-service
   datasource:
@@ -16,7 +18,6 @@ spring:
     show-sql: true
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: 'true'
 
 management:
@@ -33,6 +34,4 @@ rabbitmq:
   exchanges:
     internal: internal.exchange
   queue:
-    notification: ${rabbitmq.exchanges.internal}.queue
-  routing-keys:
-    internal-notification: internal.notification.rk
+    notification: internal.exchange.queue
